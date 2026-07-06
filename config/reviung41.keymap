@@ -15,13 +15,18 @@
 
 #define DFA 0  // Default layer
 #define NUB 1  // Number layer
-#define SYM 2
-#define FUN 3
-#define NAV 4
-#define MED 5
-#define MOS 6
-#define ADJ 7
-#define NUL 8
+#define SYM 2  // Symbol layer
+#define FUN 3  // Function layer
+#define NAV 4  // Navigation layer
+#define MED 5  // Media layer
+#define MOS 6  // Mouse layer
+#define ADJ 7  // Adjustment layer
+#define NUL 8  // NumLock layer
+
+// define thumb keys
+#define MosTab &mt &mo MOS TAB
+
+// define home row mod keys
 
 
 / {
@@ -32,10 +37,10 @@
 // -------------------------------------------------------------------------------------
 // |  ADJ |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   BSPC    |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | FUN       |
-//                         | ALT | LWR | SPC | RSE  | ALT |
+// | RAlt |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  FunDel   |
+//                 | MosTab | MedEsc | NavSpc | SymEnter | NumBckSp |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &mo ADJ   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
                         &kp LALT  &mo 1 &kp SPACE &mo 2  &kp RGUI
@@ -44,12 +49,12 @@
 
                 number_layer {
 // -------------------------------------------------------------------------------------
-// |  ADJ |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   BSPC    |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |   FUN     |
-//                         | ALT | LWR | SPC | RSE  | ALT |
+// |  ADJ |  [  |  7  |  8  |  9  |  ]  |   |  Y  |  U   |  I  |  O  |  P  |   BSPC    |
+// | CTRL |  ;  |  4  |  5  |  6  |  =  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
+// | RAlt |  `  |  1  |  2  |  3  |  \  |   |  N  |  M   |  ,  |  .  |  /  |  FunDel   |
+//                 | MosTab | MedEsc | NavSpc | SymEnter | NumBckSp |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &mo ADJ   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
                         &kp LALT  &mo 1 &kp SPACE &mo 2  &kp RGUI
