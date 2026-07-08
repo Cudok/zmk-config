@@ -11,8 +11,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 
-// RGB Underglow
-CONFIG_ZMK_RGB_UNDERGLOW=y
 
 #define DFA 0  // Default layer
 #define NUB 1  // Number layer
