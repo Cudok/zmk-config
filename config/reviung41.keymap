@@ -24,7 +24,8 @@
 #define NUL 8  // NumLock layer
 
 // define thumb keys
-#define MosTab &mt &mo MOS TAB
+#define MosTab &lt MOS TAB
+#define NumBckSpc &lt NUB BACKSPACE
 
 // define home row mod keys
 
@@ -38,12 +39,12 @@
 // |  ADJ |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   BSPC    |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
 // | RAlt |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  FunDel   |
-//                 | MosTab | MedEsc | NavSpc | SymEnter | NumBckSp |
+//                 | MosTab | MedEsc | NavSpc | SymEnter | NumBckSpc |
                         bindings = <
    &mo ADJ   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
-                        &kp LALT  &mo 1 &kp SPACE &mo 2  &kp RGUI
+                        MosTab  &mo 1 &kp SPACE &mo 2  NumBckSpc
                         >;
                 };
 
@@ -54,9 +55,9 @@
 // | RAlt |  `  |  1  |  2  |  3  |  \  |   |  N  |  M   |  ,  |  .  |  /  |  FunDel   |
 //                 | MosTab | MedEsc | NavSpc | SymEnter | NumBckSp |
                         bindings = <
-   &mo ADJ   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
+   &mo ADJ   &kp LBKT &kp N7 &kp N8 &kp N9 &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL &kp A    &kp S  &kp D  &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z    &kp X  &kp C  &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
                         &kp LALT  &mo 1 &kp SPACE &mo 2  &kp RGUI
                         >;
                 };
