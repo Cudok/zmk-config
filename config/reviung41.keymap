@@ -25,6 +25,7 @@
 // define thumb keys
 #define MosTab &lt MOS TAB
 #define SymEnter &lt SYM ENTER
+#define FunDel &lt FUN DEL
 #define NumBckSpc &lt NUB BACKSPACE
 
 // define home row mod keys
@@ -43,7 +44,7 @@
                         bindings = <
    &mo ADJ   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH FunDel
                         MosTab  &mo 1 &kp SPACE SymEnter NumBckSpc
                         >;
                 };
@@ -76,17 +77,17 @@
                         >;
                 };
 
-                raise_layer {
-// ----------------------------------------------------------------------------
-// |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL |
-// |    |  -  |  =  |  [  |  ]  |  \  |   | F1  | F2  | F3  | F4  | F5  | F6  |
-// |    | ESC | GUI | ALT | CAPS|  "  |   | F7  | F8  | F9  | F10 | F11 | F12 |
-//                       |     | ADJ | BSPC |    |     |
+                function_layer {
+// ---------------------------------------------------------------------------------------
+// |  ADJ | F12 | F7  | F8  | F9  | PSCRN |   |  Y  |  U   |  I  |  O  |  P  |   BSPC    |
+// | CTRL | F11 | F4  | F5  | F6  |  G    |   |  H  |  J   |  K  |  L  |  ;  |    '      |
+// | RAlt | F10 | F1  | F2  | F3  |  B    |   |  N  |  M   |  ,  |  .  |  /  |  FunDel   |
+//                 | APP_menu | MedEsc | NavSpc | SymEnter | NumBckSpc |
                         bindings = <
-   &trans &kp N1    &kp N2    &kp N3    &kp N4    &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
-   &trans &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH      &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6
-   &trans &kp ESC   &kp LGUI  &kp RALT  &kp CLCK  &kp DQT       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-                                &trans      &mo 3       &kp BSPC        &trans      &trans
+   &trans &kp LBKT  &kp N7 &kp N8 &kp N9 &kp PSCRN &trans &trans &trans &trans &trans &trans
+   &trans &kp SEMI  &kp N6 &kp N5 &kp N6 &trans    &trans &trans &trans &trans &trans &trans
+   &trans &kp GRAVE &kp N1 &kp N2 &kp N3 &trans    &trans &trans &trans &trans &trans &trans
+                             &kp K_APP &trans &trans &trans &trans
                         >;
                 };
 
