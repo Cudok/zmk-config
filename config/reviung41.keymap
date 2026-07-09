@@ -25,6 +25,7 @@
 // define thumb keys
 #define MosTab &lt MOS TAB
 #define SymEnter &lt SYM ENTER
+#define NavSpc &lt NAV SPACE
 #define FunDel &lt FUN DEL
 #define NumBckSpc &lt NUB BACKSPACE
 
@@ -45,7 +46,7 @@
    &mo ADJ   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH FunDel
-                        MosTab  &mo 1 &kp SPACE SymEnter NumBckSpc
+                        MosTab  &mo 1 NavSpc SymEnter NumBckSpc
                         >;
                 };
 
@@ -88,6 +89,20 @@
    &trans &kp F11  &kp N4 &kp N5 &kp N6 &trans    &trans &trans &trans &trans &trans &trans
    &trans &kp F10  &kp N1 &kp N2 &kp N3 &trans    &trans &trans &trans &trans &trans &trans
                              &kp K_APP &trans &trans &trans &trans
+                        >;
+                };
+
+                navigation_layer {
+// -------------------------------------------------------------------------------------
+// |  ADJ |  Q  |  W  |  E  |  R  |  T  |   |  Y  | Undo | Cut  | Copy | Past |   BSPC    |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  <- | up   | down |  ->  | CAPS |    '      |
+// | RAlt |  Z  |  X  |  C  |  V  |  B  |   |  N  | Ins  | Pg_dn| Pg_up| Home |  FunDel   |
+//                 | MosTab | MedEsc | NavSpc | SymEnter | NumBckSpc |
+                        bindings = <
+   &trans &trans &trans &trans &trans &trans   &trans   &kp C_AC_UNDO &kp C_AC_CUT &kp C_AC_COPY &kp O    &trans
+   &trans &trans &trans &trans &trans &trans   &kp LEFT &kp UP        &kp DOWN     &kp RIGHT     &kp CAPS &trans
+   &trans &trans &trans &trans &trans &trans   &kp N    &kp INSERT    &kp PG_DN    &kp PG_UP     &kp HOME &trans
+                             &trans &trans &trans &trans &trans
                         >;
                 };
 
