@@ -86,9 +86,9 @@
 // | RAlt | F10 | F1  | F2  | F3  |  B    |   |  N  |  M   |  ,  |  .  |  /  |  FunDel   |
 //                 | APP_menu | MedEsc | NavSpc | SymEnter | NumBckSpc |
                         bindings = <
-   &trans &kp F12  &kp N7 &kp N8 &kp N9 &kp PSCRN &trans &trans &trans &trans &trans &trans
-   &trans &kp F11  &kp N4 &kp N5 &kp N6 &trans    &trans &trans &trans &trans &trans &trans
-   &trans &kp F10  &kp N1 &kp N2 &kp N3 &trans    &trans &trans &trans &trans &trans &trans
+   &trans &kp F12  &kp F7 &kp F8 &kp F9 &kp PSCRN &trans &trans &trans &trans &trans &trans
+   &trans &kp F11  &kp F4 &kp F5 &kp F6 &trans    &trans &trans &trans &trans &trans &trans
+   &trans &kp F10  &kp F1 &kp F2 &kp F3 &trans    &trans &trans &trans &trans &trans &trans
                              &kp K_APP &trans &trans &trans &trans
                         >;
                 };
@@ -120,6 +120,21 @@
                              &trans &trans &kp C_STOP &kp C_PLAY &kp C_MUTE
                         >;
                 };
+
+                mouse_layer {
+// -------------------------------------------------------------------------------------
+// |  ADJ |  Q  |  W  |  E  |  R  |  T  |   |  no |  no  |  no  |  no  |  no  |   no   |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   | next| vol- | vol+ | prev |  no  |   no   |
+// | RAlt |  Z  |  X  |  C  |  V  |  B  |   |  no |  no  |  no  |  no  |  no  |   no   |
+//                  | MosTab | MedEsc | Stop | Play | Mute |
+                        bindings = <
+   &trans &trans &trans &trans &trans &trans   &none      &none        &none        &none      &none &none
+   &trans &trans &trans &trans &trans &trans   &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &none &none
+   &trans &trans &trans &trans &trans &trans   &none      &none        &none        &none      &none &none
+                             &trans &trans &kp C_STOP &kp C_PLAY &kp C_MUTE
+                        >;
+                };
+
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
 // | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
