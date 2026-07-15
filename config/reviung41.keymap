@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/pointing.h>
 
 
 #define DFA 0  // Default layer
@@ -123,15 +124,15 @@
 
                 mouse_layer {
 // -------------------------------------------------------------------------------------
-// |  ADJ |  Q  |  W  |  E  |  R  |  T  |   |  no |  no  |  no  |  no  |  no  |   no   |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   | next| vol- | vol+ | prev |  no  |   no   |
-// | RAlt |  Z  |  X  |  C  |  V  |  B  |   |  no |  no  |  no  |  no  |  no  |   no   |
-//                  | MosTab | MedEsc | Stop | Play | Mute |
+// |  ADJ |  Q  |  W  |  E  |  R  |  T  |   |  Y  | Undo | Cut  | Copy | Past |   BSPC |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |ms_l | ms_d | ms_u | ms_r |  no  |   no   |
+// | RAlt |  Z  |  X  |  C  |  V  |  B  |   |wh_l |wh_d  | wh_u | wh_r | end  |   no   |
+                        MosTab  MedEsc BTN2 BTN1 BTN3
                         bindings = <
-   &trans &trans &trans &trans &trans &trans   &none      &none        &none        &none      &none &none
-   &trans &trans &trans &trans &trans &trans   &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &none &none
-   &trans &trans &trans &trans &trans &trans   &none      &none        &none        &none      &none &none
-                             &trans &trans &kp C_STOP &kp C_PLAY &kp C_MUTE
+   &trans &trans &trans &trans &trans &trans   &trans         &kp C_AC_UNDO  &kp C_AC_CUT &kp C_AC_COPY   &kp O  &trans
+   &trans &trans &trans &trans &trans &trans   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &trans &trans
+   &trans &trans &trans &trans &trans &trans   &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &trans &trans
+                             &trans &trans &mkp RCLK &mkp LCLK &mkp MCLK
                         >;
                 };
 
