@@ -127,7 +127,7 @@
 // |  ADJ |  Q  |  W  |  E  |  R  |  T  |   |  Y  | Undo | Cut  | Copy | Past |   BSPC |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |ms_l | ms_d | ms_u | ms_r |  no  |   no   |
 // | RAlt |  Z  |  X  |  C  |  V  |  B  |   |wh_l |wh_d  | wh_u | wh_r | end  |   no   |
-                        MosTab  MedEsc BTN2 BTN1 BTN3
+//                  | MosTab | MedEsc | BTN2 | BTN1 | BTN3 |
                         bindings = <
    &trans &trans &trans &trans &trans &trans   &trans         &kp C_AC_UNDO  &kp C_AC_CUT &kp C_AC_COPY   &kp O  &trans
    &trans &trans &trans &trans &trans &trans   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &trans &trans
