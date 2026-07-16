@@ -104,12 +104,12 @@
                 navigation_layer {
 // -------------------------------------------------------------------------------------
 // |  ADJ |  Q  |  W  |  E  |  R  |  T  |   |  Y  | Undo | Cut  | Copy | Past |   BSPC    |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  <- | up   | down |  ->  | CAPS |    '      |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  <- | down | up   |  ->  | CAPS |    '      |
 // | RAlt |  Z  |  X  |  C  |  V  |  B  |   |  N  | Ins  | Pg_dn| Pg_up| Home |  FunDel   |
 //                 | MosTab | MedEsc | NavSpc | SymEnter | NumBckSpc |
                         bindings = <
    &trans &trans &trans &trans &trans &trans   &trans   &kp C_AC_UNDO &kp C_AC_CUT &kp C_AC_COPY &kp O    &trans
-   &trans &trans &trans &trans &trans &trans   &kp LEFT &kp UP        &kp DOWN     &kp RIGHT     &kp CAPS &trans
+   &trans &trans &trans &trans &trans &trans   &kp LEFT &kp DOWN      &kp UP       &kp RIGHT     &kp CAPS &trans
    &trans &trans &trans &trans &trans &trans   &kp N    &kp INSERT    &kp PG_DN    &kp PG_UP     &kp HOME &trans
                              &trans &trans &trans &trans &trans
                         >;
