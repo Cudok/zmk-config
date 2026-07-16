@@ -32,9 +32,9 @@
 #define NumBckSpc &lt NUB BACKSPACE
 
 // Left-hand home-row mod helper.
-// Usage: left_hrm(K1, K2, K3, K4) assigns Super, Alt, Shift, Ctrl left-to-right.
-// Any keycodes work, e.g. left_hrm(Q, W, E, R) or left_hrm(A, S, D, F).
-#define left_hrm(key1,key2,key3,key4) &mt LGUI key1 &mt LALT key2 &mt LSHIFT key3 &mt LCTRL key4
+// Usage: hrm_l(K1, K2, K3, K4) assigns Super, Alt, Shift, Ctrl left-to-right.
+// Any keycodes work, e.g. hrm_l(Q, W, E, R) or hrm_l(A, S, D, F).
+#define hrm_l(key1,key2,key3,key4) &mt LGUI key1 &mt LALT key2 &mt LSHIFT key3 &mt LCTRL key4
 
 
 / {
