@@ -31,6 +31,9 @@
 #define MedEsc &lt MED ESC
 #define NumBckSpc &lt NUB BACKSPACE
 
+// define ALt right (for Umlaute)
+#define alt_r(key) &mt RALT key
+
 // Left-hand home-row mod helper.
 // Usage: hrm_l(K1, K2, K3, K4) assigns Super, Alt, Shift, Ctrl left-to-right.
 // Any keycodes work, e.g. hrm_l(Q, W, E, R) or hrm_l(A, S, D, F).
@@ -47,14 +50,14 @@
 
                 default_layer {
 // -------------------------------------------------------------------------------------
-// |  ADJ |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   BSPC    |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
-// | RAlt |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  FunDel   |
-//                 | MosTab | MedEsc | NavSpc | SymEnter | NumBckSpc |
+// |  ADJ |  Q  |  W  |  E  |  R    |  T  |   |  Y  |  U    |  I  |  O  |  P  |   BSPC    |
+// | CTRL |  A  |  S  |  D  |  F    |  G  |   |  H  |  J    |  K  |  L  |  ;  |    '      |
+// | RAlt |  Z  |  X  |  C  |AltR(V)|  B  |   |  N  |AltR(M)|  ,  |  .  |  /  |  FunDel   |
+//                 | MosTab | MedEsc | NavSpc | SymEnter  | NumBckSpc |
                         bindings = <
-   &mo ADJ   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL hrm_l(A, S, D, F)       &kp G   &kp H hrm_r(J, K, L, SEMI)              &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH FunDel
+   &mo ADJ   &kp Q &kp W &kp E &kp R    &kp T   &kp Y &kp U    &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL hrm_l(A, S, D, F)          &kp G   &kp H hrm_r(J, K, L, SEMI)                &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C alt_r(V) &kp B   &kp N alt_r(M) &kp COMMA &kp DOT &kp FSLH FunDel
                          MosTab  MedEsc NavSpc SymEnter NumBckSpc
                         >;
                 };
