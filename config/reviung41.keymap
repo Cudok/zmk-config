@@ -36,6 +36,10 @@
 // Any keycodes work, e.g. hrm_l(Q, W, E, R) or hrm_l(A, S, D, F).
 #define hrm_l(key1,key2,key3,key4) &mt LGUI key1 &mt LALT key2 &mt LSHIFT key3 &mt LCTRL key4
 
+// Right-hand home-row mod helper.
+// Usage: hrm_r(K1, K2, K3, K4) assigns  Ctrl, Shift, Alt, Super left-to-right.
+// Any keycodes work, e.g. hrm_r(J, K, K, L)
+#define hrm_r(key1,key2,key3,key4) &mt LCTRL key1 &mt RSHIFT key2 &mt LALT key3 &mt LGUI key4
 
 / {
         keymap {
@@ -49,7 +53,7 @@
 //                 | MosTab | MedEsc | NavSpc | SymEnter | NumBckSpc |
                         bindings = <
    &mo ADJ   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL left_hrm(A, S, D, F) &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LCTRL hrm_l(A, S, D, F)       &kp G   &kp H hrm_l(J, K, L, SEMI)              &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH FunDel
                          MosTab  MedEsc NavSpc SymEnter NumBckSpc
                         >;
