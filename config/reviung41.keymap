@@ -31,7 +31,10 @@
 #define MedEsc &lt MED ESC
 #define NumBckSpc &lt NUB BACKSPACE
 
-// define home row mod keys
+// Left-hand home-row mod helper.
+// Usage: left_hrm(K1, K2, K3, K4) assigns Super, Alt, Shift, Ctrl left-to-right.
+// Any keycodes work, e.g. left_hrm(Q, W, E, R) or left_hrm(A, S, D, F).
+#define left_hrm(key1,key2,key3,key4) &mt LGUI key1 &mt LALT key2 &mt LSHIFT key3 &mt LCTRL key4
 
 
 / {
@@ -46,7 +49,7 @@
 //                 | MosTab | MedEsc | NavSpc | SymEnter | NumBckSpc |
                         bindings = <
    &mo ADJ   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LCTRL left_hrm(A, S, D, F) &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH FunDel
                          MosTab  MedEsc NavSpc SymEnter NumBckSpc
                         >;
